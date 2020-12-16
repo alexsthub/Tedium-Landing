@@ -1,0 +1,75 @@
+/* Variables done with $ 
+$varName: stuff;
+Import with @import "path"
+
+@mixin name($varname) {
+  Variables
+  something: $varname
+}
+
+@include name($var);
+*/
+
+$baseBackground: rgb(27,70,111);
+$underlineColor: rgb(68,131,193);
+$underlineHover: rgb(116, 165, 214);
+
+@mixin flexDir($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: $baseBackground;
+  // background-image: url('https://lh6.googleusercontent.com/3z0v4gQ1SVYOrGc3wh-ndHwjQtZPDpcNDCoCeh21oeRA3lH1_ZfXpMxzRhTPVWVfPAFHMVeA6Q=w16383');
+  background-size: cover;
+  background-position: center center;
+  color: white;
+}
+
+.landing-image {
+  position: absolute;
+  right: 20px;
+  bottom: -50px;
+  height: 100%;
+  width: 100%;
+  background: url('../misc/spaceneedle2.png') right bottom no-repeat;
+  background-size: 180px;
+  opacity: 0.3;
+}
+
+.contact-container {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  @include flexDir(row);
+
+  a {
+    position: relative;
+    margin: 1rem 2rem;
+    letter-spacing: 3px;
+    font-weight: 400;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: .8rem;
+    padding-bottom: 10px;
+  }
+
+  a::after {
+    position: absolute;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $underlineColor;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  a:hover::after {
+    background-color: $underlineHover;
+  }
+}

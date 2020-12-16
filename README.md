@@ -1,2 +1,3 @@
-# Tedium-Landing
-Landing page for Tedium
+# Tedium Landing Page
+
+Run npm start to run the app locally.
