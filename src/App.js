@@ -17,9 +17,8 @@ export default class App extends Component {
         <div className="app-content">
           <div className="header">
             <p className="title">Tedium Capital</p>
-            {/* <p className="description">
-              is a quantitative trading firm based in downtown Seattle.
-            </p> */}
+            <p className="description">is a quantitative trading firm</p>
+            <p className="description2">based in downtown Seattle.</p>
           </div>
 
           <div className="contact-container">
