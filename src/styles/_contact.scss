@@ -1,0 +1,76 @@
+@import "./variables";
+@import "_animations.scss";
+
+.contact-container {
+  position: absolute;
+  bottom: $basePadding;
+  left: 0;
+  box-sizing: border-box;
+
+  -webkit-animation: fadeinUp 1.5s ease forwards; 
+  -moz-animation: fadeinUp 1.5s ease forwards; 
+  -o-animation: fadeinUp 1.5s ease forwards; 
+  animation: fadeinUp 1.5s ease forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+
+  p {
+    box-sizing: border-box;
+    font-weight: 300;
+    width: 60%;
+  }
+
+  a {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 2rem 0 0;
+    letter-spacing: 3px;
+    font-weight: 400;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: .8rem;
+    padding-bottom: 10px;
+  }
+
+  a::after {
+    position: absolute;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $underlineColor;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  a:hover::after {
+    background-color: $underlineHover;
+  }
+}
+
+
+@media (max-height: 767px) {
+  .landing-image {
+    background-size: 180px;
+  }
+}
+
+@media (max-height: 650px) {
+  .landing-image {
+    background-size: 150px;
+  }
+}
+
+@media (max-height: 520px) {
+  .landing-image {
+    background-size: 125px;
+  }
+}
+
+@media (max-height: 480) {
+  .landing-image {
+    background-size: 110px;
+  }
+}

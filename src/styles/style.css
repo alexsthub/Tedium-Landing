@@ -1,4 +1,4 @@
-@keyframes fadeInPro {
+@-webkit-keyframes fadeInOut {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-10px);
@@ -17,8 +17,8 @@
   }
 }
 
-@-webkit-keyframes fadein {
-  from {
+@keyframes fadeInOut {
+  0% {
     opacity: 0;
     -webkit-transform: translateX(-10px);
   }
@@ -36,77 +36,66 @@
   }
 }
 
-body {
-  margin: 0;
-  font-family: "maison_neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #1b466f;
+@-webkit-keyframes fadeinLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
 }
 
-.app {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  color: white;
+@keyframes fadeinLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
 }
 
-.app-content {
-  position: relative;
-  height: 100%;
-  width: 100%;
+@-webkit-keyframes fadeinUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
 }
 
-.header {
-  position: absolute;
-  top: 50px;
-  left: 0px;
-  font-family: "genath_light", serif;
-  font-size: 3rem;
-  color: #d8d1ba;
+@keyframes fadeinUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
 }
 
-.header p {
-  margin: 0;
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
 }
 
-.header .title {
-  -webkit-animation: 1s ease 0s normal forwards 1 fadein;
-  animation: 1s ease 0s normal forwards 1 fadein;
-}
-
-.header .description {
-  width: 100%;
-  /* -webkit-animation: fadein 2s;
-  animation: fadein 3s; */
-  -webkit-animation: fadeInPro 3s linear forwards;
-  animation: fadeInPro 3.8s linear forwards;
-  animation-delay: 1.3s;
-  opacity: 0;
-}
-
-.header .description2 {
-  width: 100%;
-  /* -webkit-animation: fadein 2s;
-  animation: fadein 5s; */
-  -webkit-animation: fadeInPro 3s linear forwards;
-  animation: fadeInPro 3s linear forwards;
-  animation-delay: 1.7s;
-  opacity: 0;
-}
-
-.landing-image {
-  position: absolute;
-  right: 20px;
-  bottom: 0px;
-  height: 100%;
-  width: 100%;
-  background: url("../misc/spaceneedle3.png") right bottom no-repeat;
-  background-size: 180px;
-  opacity: 0.3;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
 }
 
 .contact-container {
@@ -114,19 +103,24 @@ body {
   bottom: 20px;
   left: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-animation: fadeinUp 1.5s ease forwards;
+  animation: fadeinUp 1.5s ease forwards;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+  opacity: 0;
 }
 
 .contact-container p {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-weight: 300;
   width: 60%;
 }
 
 .contact-container a {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   margin: 0 2rem 0 0;
   letter-spacing: 3px;
@@ -134,7 +128,7 @@ body {
   cursor: pointer;
   color: white;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: .8rem;
   padding-bottom: 10px;
 }
 
@@ -177,5 +171,133 @@ body {
   .landing-image {
     background-size: 110px;
   }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(10px);
+  }
+}
+
+@keyframes fadeinLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeinUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "maison_neue","Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1b466f;
+}
+
+.app {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+.app-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  font-family: "genath_light",serif;
+  font-size: 3rem;
+  color: #d8d1ba;
+}
+
+.header p {
+  margin: 0;
+}
+
+.header .title {
+  -webkit-animation: fadeinLeft 1.2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Opera < 12.1 */
+  animation: fadeinLeft 1.2s ease forwards;
+}
+
+.header .description {
+  width: 100%;
+  -webkit-animation: fadeInOut 3s linear forwards;
+  animation: fadeInOut 3.8s linear forwards;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+  opacity: 0;
+}
+
+.header .description2 {
+  -webkit-animation: fadeInOut 3s linear forwards;
+  animation: fadeInOut 3s linear forwards;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+  opacity: 0;
+}
+
+.landing-image {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  background: url("../misc/spaceneedle.png") right bottom no-repeat;
+  background-size: 180px;
+  opacity: 0.3;
+  -webkit-animation: fadeIn 1.5s ease forwards;
+  animation: fadeIn 1.5s ease forwards;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */

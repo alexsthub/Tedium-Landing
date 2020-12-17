@@ -1,13 +1,6 @@
-$baseBackground: rgb(27,70,111);
-$underlineColor: rgb(68,131,193);
-$underlineHover: rgb(116, 165, 214);
-$basePadding: 20px;
-
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
+@import "./_contact";
+@import "./_animations";
+@import "./variables";
 
 @mixin flexDir($direction) {
   display: flex;
@@ -52,22 +45,25 @@ body {
   }
 
   .title {
-    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 3s; /* Firefox < 16 */
-    -ms-animation: fadein 3s; /* Internet Explorer */
-    -o-animation: fadein 3s; /* Opera < 12.1 */
-    animation: fadein 3s;
+    -webkit-animation: fadeinLeft 1.2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeinLeft 1.2s; /* Firefox < 16 */
+    -o-animation: fadeinLeft 1.2s; /* Opera < 12.1 */
+    animation: fadeinLeft 1.2s ease forwards;
   }
 
   .description {
-    width: 60%;
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-    animation: fadein 2s;
-    // animation-delay: 4s;
-    // -webkit-animation-delay: 4s;
+    width: 100%;
+    -webkit-animation: fadeInOut 3s linear forwards;
+    animation: fadeInOut 3.8s linear forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+  }
+
+  .description2 {
+    -webkit-animation: fadeInOut 3s linear forwards;
+    animation: fadeInOut 3s linear forwards;
+    animation-delay: 1.7s;
+    opacity: 0;
   }
 }
 
@@ -77,73 +73,14 @@ body {
   bottom: 0px;
   height: 100%;
   width: 100%;
-  background: url('../misc/spaceneedle3.png') right bottom no-repeat;
+  background: url('../misc/spaceneedle.png') right bottom no-repeat;
   background-size: 180px;
   opacity: 0.3;
-}
 
-.contact-container {
-  position: absolute;
-  bottom: $basePadding;
-  left: 0;
-  box-sizing: border-box;
-
-  p {
-    box-sizing: border-box;
-    font-weight: 300;
-    width: 60%;
-  }
-
-  a {
-    box-sizing: border-box;
-    position: relative;
-    margin: 0 2rem 0 0;
-    letter-spacing: 3px;
-    font-weight: 400;
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
-    font-size: .8rem;
-    padding-bottom: 10px;
-  }
-
-  a::after {
-    position: absolute;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: $underlineColor;
-    transition: background-color 0.2s ease-in-out;
-  }
-
-  a:hover::after {
-    background-color: $underlineHover;
-  }
-}
-
-@media (max-height: 767px) {
-  .landing-image {
-    background-size: 180px;
-  }
-}
-
-@media (max-height: 650px) {
-  .landing-image {
-    background-size: 150px;
-  }
-}
-
-@media (max-height: 520px) {
-  .landing-image {
-    background-size: 125px;
-  }
-}
-
-@media (max-height: 480) {
-  .landing-image {
-    background-size: 110px;
-  }
+  -webkit-animation: fadeIn 1.5s ease forwards; 
+  -moz-animation: fadeIn 1.5s ease forwards; 
+  -o-animation: fadeIn 1.5s ease forwards; 
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
 }
