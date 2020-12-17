@@ -17,6 +17,25 @@
   }
 }
 
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(10px);
+  }
+}
+
 body {
   margin: 0;
   font-family: "maison_neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
