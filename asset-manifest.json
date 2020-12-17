@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Tedium-Landing/static/css/main.c36326a0.chunk.css",
-    "main.js": "/Tedium-Landing/static/js/main.d1801cdd.chunk.js",
-    "main.js.map": "/Tedium-Landing/static/js/main.d1801cdd.chunk.js.map",
-    "runtime-main.js": "/Tedium-Landing/static/js/runtime-main.55945607.js",
-    "runtime-main.js.map": "/Tedium-Landing/static/js/runtime-main.55945607.js.map",
-    "static/js/2.a25ab482.chunk.js": "/Tedium-Landing/static/js/2.a25ab482.chunk.js",
-    "static/js/2.a25ab482.chunk.js.map": "/Tedium-Landing/static/js/2.a25ab482.chunk.js.map",
-    "static/js/3.e6d59652.chunk.js": "/Tedium-Landing/static/js/3.e6d59652.chunk.js",
-    "static/js/3.e6d59652.chunk.js.map": "/Tedium-Landing/static/js/3.e6d59652.chunk.js.map",
-    "index.html": "/Tedium-Landing/index.html",
-    "static/css/main.c36326a0.chunk.css.map": "/Tedium-Landing/static/css/main.c36326a0.chunk.css.map",
-    "static/js/2.a25ab482.chunk.js.LICENSE.txt": "/Tedium-Landing/static/js/2.a25ab482.chunk.js.LICENSE.txt",
-    "static/media/style.css": "/Tedium-Landing/static/media/spaceneedle3.c47da213.png"
+    "main.css": "/static/css/main.acef754a.chunk.css",
+    "main.js": "/static/js/main.d1801cdd.chunk.js",
+    "main.js.map": "/static/js/main.d1801cdd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ae7dd2db.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ae7dd2db.js.map",
+    "static/js/2.a25ab482.chunk.js": "/static/js/2.a25ab482.chunk.js",
+    "static/js/2.a25ab482.chunk.js.map": "/static/js/2.a25ab482.chunk.js.map",
+    "static/js/3.e6d59652.chunk.js": "/static/js/3.e6d59652.chunk.js",
+    "static/js/3.e6d59652.chunk.js.map": "/static/js/3.e6d59652.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.acef754a.chunk.css.map": "/static/css/main.acef754a.chunk.css.map",
+    "static/js/2.a25ab482.chunk.js.LICENSE.txt": "/static/js/2.a25ab482.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/static/media/spaceneedle3.c47da213.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.55945607.js",
+    "static/js/runtime-main.ae7dd2db.js",
     "static/js/2.a25ab482.chunk.js",
-    "static/css/main.c36326a0.chunk.css",
+    "static/css/main.acef754a.chunk.css",
     "static/js/main.d1801cdd.chunk.js"
   ]
 }
