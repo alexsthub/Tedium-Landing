@@ -6,24 +6,30 @@ import React, { Component } from "react";
 
 // React text loop
 // React reveal but somehow fade out as well
+
+// TODO: Tedium Capital is a quantitative trading firm based in downtown Seattle. FADE IN on load. Company name first. Second part after
+// TODO: Between careers and contact, go to a NEWS page (/NEWS)
+// TODO: Host on GH Pages
 export default class App extends Component {
   render() {
     return (
       <div className="app">
         <div className="landing-image" />
         <div className="app-content">
-          <div className="header">Tedium Capital</div>
+          <div className="header">
+            <p className="title">Tedium Capital</p>
+            {/* <p className="description">
+              is a quantitative trading firm based in downtown Seattle.
+            </p> */}
+          </div>
 
           <div className="contact-container">
-            <p>
+            {/* <p>
               If you are considering a job at Tedium Capital, click here to view
-              open positions or contact us to learn more.
-            </p>
-            <a
-              href={
-                "https://www.linkedin.com/company/tedium-capital/?fbclid=IwAR0cqMsKVQT8e8ZWyFQr9OFY6PzpCzmaHOGLLusBTh4fJzuJoN0lvpic5to"
-              }
-            >
+              open positions or contact us at hello@tedium.capital to learn
+              more.
+            </p> */}
+            <a href={"https://www.linkedin.com/company/tedium-capital/jobs/"}>
               CAREERS
             </a>
             <a href={"hello@tedium.capital"}>CONTACT</a>

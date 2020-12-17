@@ -1,15 +1,3 @@
-/* Variables done with $ 
-$varName: stuff;
-Import with @import "path"
-
-@mixin name($varname) {
-  Variables
-  something: $varname
-}
-
-@include name($var);
-*/
-
 $baseBackground: rgb(27,70,111);
 $underlineColor: rgb(68,131,193);
 $underlineHover: rgb(116, 165, 214);
@@ -35,9 +23,6 @@ body {
   width: 100%;
   height: 100vh;
   padding: $basePadding;
-  // background-image: url('https://lh6.googleusercontent.com/3z0v4gQ1SVYOrGc3wh-ndHwjQtZPDpcNDCoCeh21oeRA3lH1_ZfXpMxzRhTPVWVfPAFHMVeA6Q=w16383');
-  // background-size: cover;
-  // background-position: center center;
   color: white;
 }
 
@@ -50,11 +35,19 @@ body {
 .header {
   position: absolute;
   top: 50px;
-  left: 00px;
+  left: 0px;
 
   font-family: "genath_light",serif;
   font-size: 3rem;
   color: rgb(216,209,186);
+
+  p {
+    margin: 0;
+  }
+
+  .description {
+    width: 60%;
+  }
 }
 
 .landing-image {
@@ -77,8 +70,7 @@ body {
   p {
     box-sizing: border-box;
     font-weight: 300;
-    padding: 0 0 20px 0;
-    width: 50%;
+    width: 60%;
   }
 
   a {
