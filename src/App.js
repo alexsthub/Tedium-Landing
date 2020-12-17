@@ -9,7 +9,6 @@ import React, { Component } from "react";
 
 // TODO: Tedium Capital is a quantitative trading firm based in downtown Seattle. FADE IN on load. Company name first. Second part after
 // TODO: Between careers and contact, go to a NEWS page (/NEWS)
-// TODO: Host on GH Pages
 export default class App extends Component {
   render() {
     return (
@@ -32,7 +31,7 @@ export default class App extends Component {
             <a href={"https://www.linkedin.com/company/tedium-capital/jobs/"}>
               CAREERS
             </a>
-            <a href={"hello@tedium.capital"}>CONTACT</a>
+            <a href={"mailto:hello@tedium.capital"}>CONTACT</a>
           </div>
 
           {/* <svg

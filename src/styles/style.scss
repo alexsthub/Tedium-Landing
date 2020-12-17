@@ -3,6 +3,12 @@ $underlineColor: rgb(68,131,193);
 $underlineHover: rgb(116, 165, 214);
 $basePadding: 20px;
 
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
 @mixin flexDir($direction) {
   display: flex;
   flex-direction: $direction;
@@ -45,8 +51,23 @@ body {
     margin: 0;
   }
 
+  .title {
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+    -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+    animation: fadein 3s;
+  }
+
   .description {
     width: 60%;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+    // animation-delay: 4s;
+    // -webkit-animation-delay: 4s;
   }
 }
 
