@@ -49,28 +49,3 @@
     background-color: $underlineHover;
   }
 }
-
-
-@media (max-height: 767px) {
-  .landing-image {
-    background-size: 180px;
-  }
-}
-
-@media (max-height: 650px) {
-  .landing-image {
-    background-size: 150px;
-  }
-}
-
-@media (max-height: 520px) {
-  .landing-image {
-    background-size: 125px;
-  }
-}
-
-@media (max-height: 480) {
-  .landing-image {
-    background-size: 110px;
-  }
-}

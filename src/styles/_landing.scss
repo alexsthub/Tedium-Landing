@@ -1,0 +1,94 @@
+
+.landing-container {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 1px;
+  padding: $basePadding;
+  color: white;
+}
+
+.landing-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+
+  font-family: "genath_light",serif;
+  font-size: 3rem;
+  color: rgb(216,209,186);
+
+  p {
+    margin: 0;
+  }
+
+  .title {
+    -webkit-animation: fadeinLeft 1.2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeinLeft 1.2s; /* Firefox < 16 */
+    -o-animation: fadeinLeft 1.2s; /* Opera < 12.1 */
+    animation: fadeinLeft 1.2s ease forwards;
+  }
+
+  .description {
+    width: 100%;
+    -webkit-animation: fadeInOut 3s linear forwards;
+    animation: fadeInOut 3.8s linear forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+  }
+
+  .description2 {
+    -webkit-animation: fadeInOut 3s linear forwards;
+    animation: fadeInOut 3s linear forwards;
+    animation-delay: 1.7s;
+    opacity: 0;
+  }
+}
+
+.landing-image {
+  position: absolute;
+  right: $basePadding;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  background: url('../misc/spaceneedle.png') right bottom no-repeat;
+  background-size: 180px;
+  opacity: 0.3;
+
+  -webkit-animation: fadeIn 1.5s ease forwards; 
+  -moz-animation: fadeIn 1.5s ease forwards; 
+  -o-animation: fadeIn 1.5s ease forwards; 
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+}
+
+@media (max-height: 767px) {
+  .landing-image {
+    background-size: 180px;
+  }
+}
+
+@media (max-height: 650px) {
+  .landing-image {
+    background-size: 150px;
+  }
+}
+
+@media (max-height: 520px) {
+  .landing-image {
+    background-size: 125px;
+  }
+}
+
+@media (max-height: 480) {
+  .landing-image {
+    background-size: 110px;
+  }
+}
