@@ -5,16 +5,17 @@ import CarouselText from "../constants/Carousel";
 
 // TODO: Fade out old text, wait, fade in new text
 // TODO: Cascade
-// TODO: Do not render immediately. We need to wait until the title is finished animating
-const INTERVAL = 5000;
 export default class TextCarousel extends Component {
   constructor(props) {
     super(props);
-    this.state = { selectedIndex: 0, points: this.constructPoints(0) };
+    this.state = { selectedIndex: -1, points: this.constructPoints(0) };
   }
 
-  componentDidMount = () => {
-    this.counter = setInterval(this.timer, INTERVAL);
+  componentDidUpdate = (prevProps) => {
+    if (!prevProps.animFinished && this.props.animFinished) {
+      this.timer();
+      this.counter = setInterval(this.timer, this.props.interval);
+    }
   };
 
   componentWillUnmount = () => {
@@ -33,7 +34,8 @@ export default class TextCarousel extends Component {
 
   constructPoints = (selectedIdx) => {
     const points = CarouselText.map((element, i) => {
-      const show = selectedIdx === i ? "active-text" : "";
+      const show =
+        selectedIdx === i && this.props.animFinished ? "active-text" : "";
       const listItems = element.map((e) => {
         return (
           <li key={e} className={show}>

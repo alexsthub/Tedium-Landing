@@ -3,7 +3,19 @@ import { Link } from "react-router-dom";
 
 import TextCarousel from "./TextCarousel";
 
+const INTERVAL = 5000;
 export default class LandingPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { animFinished: false };
+  }
+
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({ animFinished: true });
+    }, 2500);
+  };
+
   render() {
     return (
       <div className="landing-container">
@@ -11,7 +23,10 @@ export default class LandingPage extends Component {
         <div className="landing-content">
           <div className="header">
             <p className="title">Tedium Capital</p>
-            <TextCarousel />
+            <TextCarousel
+              animFinished={this.state.animFinished}
+              interval={INTERVAL}
+            />
           </div>
 
           <div className="contact-container">

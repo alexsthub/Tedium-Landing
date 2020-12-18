@@ -225,6 +225,10 @@
   font-size: 3.3rem;
   line-height: 140%;
   color: #d8d1ba;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .header p {
