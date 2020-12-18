@@ -220,8 +220,10 @@
   position: absolute;
   top: 50px;
   left: 0px;
+  width: 100%;
   font-family: "genath_light",serif;
-  font-size: 3rem;
+  font-size: 3.3rem;
+  line-height: 140%;
   color: #d8d1ba;
 }
 
@@ -237,21 +239,35 @@
   animation: fadeinLeft 1.2s ease forwards;
 }
 
-.header .description {
-  width: 100%;
-  -webkit-animation: fadeInOut 3s linear forwards;
-  animation: fadeInOut 3.8s linear forwards;
-  -webkit-animation-delay: 1.3s;
-          animation-delay: 1.3s;
-  opacity: 0;
+.header .text-carousel {
+  position: relative;
 }
 
-.header .description2 {
-  -webkit-animation: fadeInOut 3s linear forwards;
-  animation: fadeInOut 3s linear forwards;
-  -webkit-animation-delay: 1.7s;
-          animation-delay: 1.7s;
+.header .text-carousel ul {
+  position: absolute;
+  width: 100%;
+  list-style: none;
+  border: 0;
+  border-style: none;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.header .text-carousel li {
   opacity: 0;
+  -webkit-transform: translate3d(0, 8%, 0);
+          transform: translate3d(0, 8%, 0);
+  -webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.header .text-carousel .active-text {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .landing-image {
@@ -288,9 +304,21 @@
   }
 }
 
-@media (max-height: 480) {
+@media (max-height: 480px) {
   .landing-image {
     background-size: 110px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .header {
+    font-size: 2.1rem;
   }
 }
 

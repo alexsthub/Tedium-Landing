@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import TextCarousel from "./TextCarousel";
+
 export default class LandingPage extends Component {
   render() {
     return (
@@ -9,8 +11,7 @@ export default class LandingPage extends Component {
         <div className="landing-content">
           <div className="header">
             <p className="title">Tedium Capital</p>
-            <p className="description">is a quantitative trading firm</p>
-            <p className="description2">based in downtown Seattle.</p>
+            <TextCarousel />
           </div>
 
           <div className="contact-container">
