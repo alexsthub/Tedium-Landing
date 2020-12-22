@@ -326,6 +326,12 @@
   }
 }
 
+@media (max-width: 400px) {
+  .header {
+    font-size: 1.9rem;
+  }
+}
+
 body {
   margin: 0;
   font-family: "maison_neue","Helvetica Neue", Helvetica, Arial, sans-serif;

@@ -7,11 +7,11 @@
   left: 0;
   box-sizing: border-box;
 
-  -webkit-animation: fadeinUp 1.5s ease forwards; 
-  -moz-animation: fadeinUp 1.5s ease forwards; 
-  -o-animation: fadeinUp 1.5s ease forwards; 
-  animation: fadeinUp 1.5s ease forwards;
-  animation-delay: 1.3s;
+  -webkit-animation: fadeinUp $subAnimationTime ease forwards; 
+  -moz-animation: fadeinUp $subAnimationTime ease forwards; 
+  -o-animation: fadeinUp $subAnimationTime ease forwards; 
+  animation: fadeinUp $subAnimationTime ease forwards;
+  animation-delay: $subAnimationDelay;
   opacity: 0;
 
   p {

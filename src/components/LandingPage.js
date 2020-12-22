@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 import TextCarousel from "./TextCarousel";
 
-const INTERVAL = 5000;
+const INTERVAL = 4500;
+const PAUSE_INTERVAL = 1600;
 export default class LandingPage extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,7 @@ export default class LandingPage extends Component {
   componentDidMount = () => {
     setTimeout(() => {
       this.setState({ animFinished: true });
-    }, 2500);
+    }, 3000);
   };
 
   render() {
@@ -26,6 +27,7 @@ export default class LandingPage extends Component {
             <TextCarousel
               animFinished={this.state.animFinished}
               interval={INTERVAL}
+              pauseInterval={PAUSE_INTERVAL}
             />
           </div>
 

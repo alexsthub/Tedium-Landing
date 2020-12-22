@@ -1,3 +1,4 @@
+@import "./variables";
 
 .landing-container {
   box-sizing: border-box;
@@ -31,10 +32,10 @@
   }
 
   .title {
-    -webkit-animation: fadeinLeft 1.2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadeinLeft 1.2s; /* Firefox < 16 */
-    -o-animation: fadeinLeft 1.2s; /* Opera < 12.1 */
-    animation: fadeinLeft 1.2s ease forwards;
+    -webkit-animation: fadeinLeft $titleAnimationTime; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeinLeft $titleAnimationTime; /* Firefox < 16 */
+    -o-animation: fadeinLeft $titleAnimationTime; /* Opera < 12.1 */
+    animation: fadeinLeft $titleAnimationTime ease forwards;
   }
 
   .text-carousel {
@@ -74,11 +75,11 @@
   background-size: 180px;
   opacity: 0.3;
 
-  -webkit-animation: fadeIn 1.5s ease forwards; 
-  -moz-animation: fadeIn 1.5s ease forwards; 
-  -o-animation: fadeIn 1.5s ease forwards; 
-  animation: fadeIn 1.5s ease forwards;
-  animation-delay: 1.3s;
+  -webkit-animation: fadeIn $subAnimationTime ease forwards; 
+  -moz-animation: fadeIn $subAnimationTime ease forwards; 
+  -o-animation: fadeIn $subAnimationTime ease forwards; 
+  animation: fadeIn $subAnimationTime ease forwards;
+  animation-delay: $subAnimationDelay;
   opacity: 0;
 }
 
@@ -115,5 +116,11 @@
 @media (max-width: 580px) {
   .header {
     font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    font-size: 1.9rem;
   }
 }

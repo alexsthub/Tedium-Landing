@@ -3,39 +3,71 @@ import "../styles/style.css";
 
 import CarouselText from "../constants/Carousel";
 
-// TODO: Fade out old text, wait, fade in new text
 // TODO: Cascade
 export default class TextCarousel extends Component {
   constructor(props) {
     super(props);
-    this.state = { selectedIndex: -1, points: this.constructPoints(0) };
+    this.state = {
+      selectedIndex: 0,
+      points: this.constructPoints(0, false),
+      pause: false,
+    };
   }
 
   componentDidUpdate = (prevProps) => {
     if (!prevProps.animFinished && this.props.animFinished) {
-      this.timer();
-      this.counter = setInterval(this.timer, this.props.interval);
+      this.start();
     }
   };
 
-  componentWillUnmount = () => {
-    clearInterval(this.counter);
+  start = () => {
+    this.setState(
+      {
+        points: this.constructPoints(
+          this.state.selectedIndex,
+          this.state.pause
+        ),
+      },
+      () => {
+        setTimeout(() => this.pause(), this.props.interval);
+      }
+    );
   };
 
-  timer = () => {
+  next = () => {
     const idx = this.state.selectedIndex;
     const maxIdx = this.state.points.length - 1;
     const newIdx = idx === maxIdx ? 0 : idx + 1;
-    this.setState({
-      selectedIndex: newIdx,
-      points: this.constructPoints(newIdx),
-    });
+    this.setState(
+      {
+        selectedIndex: newIdx,
+        points: this.constructPoints(newIdx, false),
+        pause: false,
+      },
+      () => {
+        setTimeout(() => this.pause(), this.props.interval);
+      }
+    );
   };
 
-  constructPoints = (selectedIdx) => {
+  pause = () => {
+    this.setState(
+      {
+        pause: true,
+        points: this.constructPoints(this.state.selectedIndex, true),
+      },
+      () => {
+        setTimeout(() => this.next(), this.props.pauseInterval);
+      }
+    );
+  };
+
+  constructPoints = (selectedIdx, pause) => {
     const points = CarouselText.map((element, i) => {
       const show =
-        selectedIdx === i && this.props.animFinished ? "active-text" : "";
+        selectedIdx === i && this.props.animFinished && !pause
+          ? "active-text"
+          : "";
       const listItems = element.map((e) => {
         return (
           <li key={e} className={show}>
