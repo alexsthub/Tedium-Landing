@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import "../styles/style.css";
 
-import CarouselText from "../constants/Carousel";
+import CarouselText from "../constants/TextCarouselContent";
 
 // TODO: Cascade
+// TODO: On animate in, translate up | On out, translate down
+// For each set of points, we need length, listItemIndex, ascending/descending
 export default class TextCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedIndex: 0,
       points: this.constructPoints(0, false),
-      pause: false,
     };
   }
 
@@ -23,10 +24,7 @@ export default class TextCarousel extends Component {
   start = () => {
     this.setState(
       {
-        points: this.constructPoints(
-          this.state.selectedIndex,
-          this.state.pause
-        ),
+        points: this.constructPoints(this.state.selectedIndex, false),
       },
       () => {
         setTimeout(() => this.pause(), this.props.interval);

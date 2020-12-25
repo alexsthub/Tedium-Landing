@@ -1,6 +1,6 @@
 @import "./variables";
 
-.landing-container {
+.header-container {
   box-sizing: border-box;
   position: relative;
   width: 100%;
@@ -10,7 +10,7 @@
   color: white;
 }
 
-.landing-content {
+.header-content {
   position: relative;
   height: 100%;
   width: 100%;
@@ -65,7 +65,7 @@
   }
 }
 
-.landing-image {
+.header-image {
   position: absolute;
   right: $basePadding;
   bottom: 0px;
@@ -123,4 +123,10 @@
   .header {
     font-size: 1.9rem;
   }
+}
+
+
+.test2 {
+  min-height: 50vh;
+  background-color: white;
 }

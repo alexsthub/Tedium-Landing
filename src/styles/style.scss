@@ -3,6 +3,7 @@
 @import "./variables";
 
 @import "./landing";
+@import "./carousel";
 
 @mixin flexDir($direction) {
   display: flex;

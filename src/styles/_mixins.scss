@@ -1,0 +1,11 @@
+@mixin flexCenter($direction: null) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @if ($direction) {
+    flex-direction: $direction;
+  } @else {
+    flex-direction: row;
+  }
+}
