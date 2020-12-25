@@ -6,10 +6,9 @@ import NavBar from "./NavBar";
 
 import { Carousel } from "react-responsive-carousel";
 
-// TODO: Make a navbar animate in at the top once you move past the header
 // TODO: Show 3 or 4 characteristics https://speedtrader.com/
 const INTERVAL = 4500;
-const PAUSE_INTERVAL = 1600;
+const PAUSE_INTERVAL = 1000;
 export default class LandingPage extends Component {
   constructor(props) {
     super(props);

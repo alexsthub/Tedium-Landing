@@ -55,7 +55,7 @@
     li {
       opacity: 0;
       transform: translate3d(0,8%,0);
-      transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+      transition: transform 600ms ease-in-out, opacity 600ms ease-in-out;
     }
 
     .active-text {
