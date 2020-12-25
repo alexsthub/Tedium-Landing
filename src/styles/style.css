@@ -649,6 +649,76 @@
   opacity: 1;
 }
 
+.navbar {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  z-index: 100;
+  display: none;
+}
+
+.navbar img {
+  width: 100%;
+  max-width: 30px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar nav {
+  background: #292e38;
+  border-radius: 0 5em 5em 0;
+  padding: .5em;
+  -webkit-clip-path: ellipse(50% 50% at -50% 50%);
+          clip-path: ellipse(50% 50% at -50% 50%);
+}
+
+.navbar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar nav ul li a {
+  display: block;
+  padding: .5em;
+  margin: 0 .5em;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  background: #323844;
+}
+
+.navbar nav ul li a img {
+  opacity: 0;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.navbar .menu {
+  padding: 1em;
+  border-radius: 100%;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .menu:hover {
+  background: #1e2129;
+}
+
+.navbar-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 body {
   margin: 0;
   font-family: "maison_neue","Helvetica Neue", Helvetica, Arial, sans-serif;

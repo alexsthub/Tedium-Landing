@@ -1,0 +1,62 @@
+.navbar {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  z-index: 100;
+  display: none;
+
+  img {
+    width: 100%;
+    max-width: 30px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    background: rgb(41,46,56);
+    border-radius: 0 5em 5em 0;
+    padding: .5em;
+    clip-path: ellipse(50% 50% at -50% 50%);
+
+    ul {
+      display: flex;
+
+      li a {
+        display: block;
+        padding: .5em;
+        margin: 0 .5em;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background: rgb(50,56,68);
+        }
+
+        img {
+          opacity: 0;
+          transform: translateX(-10px);
+        }
+      }
+    }
+  }
+
+  .menu {
+    padding: 1em;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+        
+    &:hover {
+      background: rgb(30,33,41);
+    }
+  }
+
+}
+
+.navbar-active {
+  display: flex;
+}

@@ -4,6 +4,7 @@
 
 @import "./landing";
 @import "./carousel";
+@import "./navbar";
 
 @mixin flexDir($direction) {
   display: flex;

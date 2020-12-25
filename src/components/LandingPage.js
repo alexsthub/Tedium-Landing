@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import TextCarousel from "./TextCarousel";
+import NavBar from "./NavBar";
 
 import { Carousel } from "react-responsive-carousel";
 
@@ -13,6 +14,8 @@ export default class LandingPage extends Component {
   constructor(props) {
     super(props);
     this.state = { animFinished: false };
+
+    this.headerRef = React.createRef();
   }
 
   componentDidMount = () => {
@@ -24,7 +27,8 @@ export default class LandingPage extends Component {
   render() {
     return (
       <div>
-        <div className="header-container">
+        <NavBar headerRef={this.headerRef} />
+        <div className="header-container" ref={this.headerRef}>
           <div className="header-image" />
           <div className="header-content">
             <div className="header">
@@ -61,7 +65,11 @@ export default class LandingPage extends Component {
           swipeable={true}
         >
           <div className="carousel-item">
-            <img src="icon-backempty.png" className="carousel-logo" />
+            <img
+              src="icon-backempty.png"
+              className="carousel-logo"
+              alt={"Tedium Logo"}
+            />
             <h2>MAXIMIZE YOUR TRADING EDGE</h2>
             <p>
               In this business, you’re only as good as your data, technology and
