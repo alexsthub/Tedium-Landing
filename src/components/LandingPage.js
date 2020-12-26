@@ -6,7 +6,6 @@ import NavBar from "./NavBar";
 
 import { Carousel } from "react-responsive-carousel";
 
-// TODO: Let the navbar menu have a background so it doesn't get caught in the white background
 const INTERVAL = 4500;
 const PAUSE_INTERVAL = 1000;
 export default class LandingPage extends Component {
@@ -76,8 +75,22 @@ export default class LandingPage extends Component {
               latest technology and ideas to be successful.
             </p>
           </div>
-          <div className="carousel-item">Page 2</div>
-          <div className="carousel-item">Page 3</div>
+          <div className="carousel-item">
+            <h2>STRIVING FOR THE BEST</h2>
+            <p>
+              Searching for talented and passionate individuals to join the team
+              as we develop and scale our platform. We believe in kindness,
+              collaboration, and progress. If you like an environment where you
+              will have a big impact, consider checking out our open positions!
+            </p>
+          </div>
+          {/* <div className="carousel-item">
+            <h2>STRIVING FOR THE BEST</h2>
+            <p>
+              Searching for talented and passionate individuals to join the team
+              as we develop and scale our platform.
+            </p>
+          </div> */}
         </Carousel>
 
         <div className="attributes">

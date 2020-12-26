@@ -129,7 +129,7 @@ export default class NavBar extends Component {
           alt={"Menu"}
           ref={(menu) => (this.menu = menu)}
           className="menu"
-          src="https://s.svgbox.net/hero-outline.svg?ic=menu-alt-1&fill=fff"
+          src="https://s.svgbox.net/hero-outline.svg?ic=menu-alt-1&fill=ccb258"
           onClick={this.handleClick}
         ></img>
         <nav ref={(nav) => (this.nav = nav)}>
