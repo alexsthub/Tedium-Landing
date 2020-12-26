@@ -20,11 +20,16 @@ export default class NavBar extends Component {
     window.addEventListener("scroll", this.handleScroll);
 
     this.timeline = new TimelineLite({ paused: true });
-    this.timeline.to(this.menu, 0.3, {
-      background: "#805ad5",
-      borderRadius: "5em 0 0 5em",
-      ease: "Power2.easeIn",
-    });
+    this.timeline.to(
+      this.menu,
+      0.1,
+      {
+        background: "#805ad5",
+        borderRadius: "5em 0 0 5em",
+        ease: "Power2.easeIn",
+      },
+      "-=.2"
+    );
     this.timeline.to(
       this.nav,
       0.3,

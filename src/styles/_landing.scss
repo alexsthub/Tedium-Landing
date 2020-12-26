@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 
 .header-container {
   box-sizing: border-box;
@@ -83,6 +84,63 @@
   opacity: 0;
 }
 
+.attributes {
+  @include flexCenter;
+  background-color: white;
+
+  .attribute-content {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  
+
+    .attribute {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      padding: 70px 15px;
+      text-align: center;
+
+      img {
+        height: 100px;
+        width: 100px;
+      }
+
+      h3 {
+        margin: 10px 0px;
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      p {
+        margin: 0;
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.footer {
+  min-height: 25vh;
+  background-color: $baseBackground;
+  color: rgb(216,209,186);
+
+  display: flex;
+  align-items: flex-end;
+
+  p {
+    font-size: 1.2rem;
+    margin: 15px;
+  }
+}
+
+
+
 @media (max-height: 767px) {
   .landing-image {
     background-size: 180px;
@@ -125,8 +183,54 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .attributes {
+    .attribute-content {
+      width: 90%;
+      .attribute {
+        h3 {
+          font-size: 1.3rem;
+        }
 
-.test2 {
-  min-height: 50vh;
-  background-color: white;
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
 }
+
+@media (max-width: 850px) {
+  .attributes {
+    .attribute-content {
+      width: 100%;
+      .attribute {
+        h3 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .attributes {
+    .attribute-content {
+      flex-direction: column;
+      width: 60%;
+      margin: 20px 0;
+
+      .attribute {
+        padding: 30px 15px;
+      }
+    }
+  }
+}
+
+
+
+

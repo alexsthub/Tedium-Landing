@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 
 import { Carousel } from "react-responsive-carousel";
 
-// TODO: Show 3 or 4 characteristics https://speedtrader.com/
+// TODO: Let the navbar menu have a background so it doesn't get caught in the white background
 const INTERVAL = 4500;
 const PAUSE_INTERVAL = 1000;
 export default class LandingPage extends Component {
@@ -80,7 +80,46 @@ export default class LandingPage extends Component {
           <div className="carousel-item">Page 3</div>
         </Carousel>
 
-        <div className="test2"></div>
+        <div className="attributes">
+          <div className="attribute-content">
+            <div className="attribute">
+              <img
+                src={"https://s.svgbox.net/materialui.svg?ic=money_off"}
+                alt={"Low costs"}
+              />
+              <h3>LOW COST TRADES</h3>
+              <p>
+                Tedium Capital offers low commissions and financing rates in
+                order to maximize your returns.
+              </p>
+            </div>
+            <div className="attribute">
+              <img
+                src={"https://s.svgbox.net/hero-outline.svg?ic=globe"}
+                alt={"Globe"}
+              />
+              <h3>WIDE ACCESS</h3>
+              <p>
+                Tedium Capital offers investments in stocks, options, and bonds.{" "}
+              </p>
+            </div>
+            <div className="attribute">
+              <img
+                src={"https://s.svgbox.net/materialui.svg?ic=computer"}
+                alt={"Computer"}
+              />
+              <h3>POWERFUL TECHNOLOGY</h3>
+              <p>
+                Tedium Capital's technology helps optimize trading speed and
+                efficiency.{" "}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <footer className="footer">
+          <p>Tedium Capital © 2020</p>
+        </footer>
       </div>
     );
   }
